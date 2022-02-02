@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet&family=Fleur+De+Leah&family=Great+Vibes&family=Grey+Qo&family=Luxurious+Script&family=Mea+Culpa&family=Miss+Fajardose&family=Monsieur+La+Doulaise&family=Nosifer&family=Romanesco&family=Sail&family=Tangerine&display=swap');
+
+/*Configurações gerais*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*scroll-behavior: */
+}
+
+/*Cores*/
+:root
+{
+    --white:#fff;
+    --AliceBlue:#F0F8FF;
+    --gray81:#CFCFCF;
+    --Silver:#C0C0C0;
+    --Tomato:#FF6347;
+    --Brown:#A52A2A;
+    --red:#FF0000;
+    --black1:#333;
+    --Black: #000000;
+}
+
+header
+{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 1000;
+    /*border-bottom: 2px solid rgba(0,0,0, 0.5);*/
+    transition: 0.5s;
+}
+
+/*Configuração da barra para pecorrer o texto
+header.pecorrer
+{
+    padding: 20px 50px;
+}*/
+
+.log
+{
+    position: relative;
+    display: inline-block;
+    color: var(--red);
+    text-shadow: 2px 1px 1px cornsilk;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Nosifer', cursive;
+    /*font-family: 'Fleur De Leah', cursive;*/
+}
+
+/*Configuração do ícone do menu*/
+.menu
+{
+    position: relative;
+    background: url('img/menu/men.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.menu.active
+{
+    position: relative;
+    background: url('img/menu/X.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;     
+}
+
+.navbar
+{
+    position: fixed;
+    top: 5;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*imagem do menu floresta*/
+    background: url('img/barra/3.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    transition: 0.25s;
+    opacity: 0;
+    visibility: hidden;
+}
+.navbar.active
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar li
+{
+    list-style: none;
+    margin: 1px 0;
+    font-family: 'Nosifer', cursive;
+}
+
+.navbar li
+{
+    list-style: none;
+    margin: 10px 0;
+}
+
+
+.navbar li a
+{
+    color: rgb(241, 0, 0);
+    text-shadow: 2px 1px 1px rgb(255, 255, 255);
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+section
+{
+    position: relative;
+    padding: 100px;
+    width: 100%;
+    min-height: 100vh;
+    color: whitesmoke;
+}
+
+.confimg
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.ablog
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.ablog .ablogtxt
+{
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 254, 254, 0.09);
+    flex-direction: column;
+}
+
+.ablog .ablogtxt h2
+{
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: #CCC 1px 0 10px;
+    color: rgb(146, 10, 10);
+    font-family: 'Nosifer', cursive;
+}
+
+.ablog .ablogtxt h4
+{
+    font-size: 1.6em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgb(250, 248, 249);
+    text-shadow: 5px 3px 2px black;
+    text-transform: uppercase;
+    padding: 30px;
+    font-family: 'Nosifer', cursive;
+}
+.btn
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 20px;
+    color: red;
+    text-shadow: 1px 1px 1px rgb(214, 194, 194);
+    border: 2px outset rgb(49, 2, 2);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: 0.25s;
+    font-family: 'Nosifer', cursive;
+}
+
+.btn:hover
+{
+    color: white;
+    background: rgb(241, 2, 2);
+}
+
+/*Sobre o blog */
+.txtsob
+{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.txtsob h2
+{
+    color: var(--black);
+    font-family: 'Nosifer', cursive;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: #CCC 1px 0 10px;
+    color: rgb(255, 2, 2);
+
+}
+
+.txtsob h2:before
+{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform:translateX(270%);
+    width: 36px;
+    height: 5px;
+    background: var(--red);
+}
+
+p
+{
+    color: var(--Black);
+    margin: 25px;
+    padding: 10px;
+    font-size: 1.9em;
+    font-weight: 500;
+    text-align:justify;
+    font-family: 'Mea Culpa', cursive;
+}
+
+.sob .cont1
+{
+    position: relative;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.sob .cont1 .cont01
+{
+    position: relative;
+}
+
+.sob .cont1 .cont01 .cont02
+{
+    min-height: 550px;
+}
+
+/*poste*/
+.post
+{
+    position: relative;
+    background: rgb(0, 0, 0);
+}
+
+.post .t01 h2
+{
+    color: var(--black);
+    font-family: 'Nosifer', cursive;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: #CCC 1px 0 10px;
+    color: rgb(255, 5, 5);
+}
+
+h2:before
+{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform:translateX(180%);
+    width: 36px;
+    height: 5px;
+    background: var(--red);
+}
+
+.post .q
+{
+    
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    
+}
+
+.post .q .postcolu
+{
+    position: relative;
+    margin-top: 30px;
+}
+
+.post .q .postcolu .postli
+{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 5px;
+}
+
+.post .q .postcolu .postli.tam
+{
+    height: 807px; 
+}
+
+.post .q .postcolu .postli .titu
+{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.25s;
+    opacity: 0;
+    visibility: hidden;
+}
+.post .q .postcolu .postli:hover .titu
+{
+    opacity: 0.7;
+    visibility: visible;
+}
+.post .q .postcolu .postli .titu h2
+{
+    font-weight: 900;
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: var(--Black);
+    font-family: 'Luxurious Script', cursive;
+    padding: 10px;
+}
+
+.post .q .postcolu .postli .titu h3
+{
+    font-weight: 400;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    color: var(--Black);
+    font-family: 'Great Vibes', cursive;
+}
+
+
+.post .q .postcolu .postli .titu .btn
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 20px;
+    color: red;
+    text-shadow: 1px 1px 1px rgb(214, 194, 194);
+    border: 2px outset rgb(49, 2, 2);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: 0.25s;
+    font-family: 'Nosifer', cursive;
+}
+
+
+.post .q .postcolu .postli .titu .btn:hover
+{
+    color: white;
+    background: rgb(241, 2, 2);
+}
+
+/*Roda pé*/
+footer
+{
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--Black);
+}
+
+footer, .footmenu
+{
+    display: flex;
+    padding: 20px;
+    
+}
+
+footer .footmenu li
+{
+    list-style: none;
+    padding: 1px;
+}
+
+footer .footmenu li a
+{
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+
+footer .roda
+{
+   color: var(--Silver);
+   text-align: center;
+   letter-spacing: 1px; 
+   padding: 1px;
+   
+}
+
+/*Responsivo*/
+/*Celular*/
+@media screen and (min-width:0px) and (max-width:500px)
+{
+    header
+    {
+      
+        padding: 1px 1px;        
+    }
+    .cab
+    {
+        padding: 3px 3px;  
+    }
+
+    .log
+    {
+        font-size: 1.1em; 
+        padding: 3px 15px;    
+    }
+/*Configuração do menu*/
+    .menu
+    {
+        width: 270px;
+        height: 20px;
+        background-size: 35px;
+        padding: 30px;
+    }
+
+    .menu.active
+    {
+        width: 270px;
+        height: 20px;
+        background-size: 35px;
+        padding: 30px;  
+    }
+
+    .navbar
+    {
+        padding: 1px 1px;
+        background: url('img/barra/3.jpg');
+        background-size: 293%;
+        background-repeat: no-repeat;
+    }
+
+    .navbar ul 
+    {
+        padding: 10px 10px;
+    }
+
+    .navbar li a
+    {
+        padding: 1px 1px;
+        align-items: center;
+        font-size: 1.3em;
+    }
+
+    section
+    {
+        padding: 1px 1px;
+    }
+
+    .ablog
+    {
+        padding: 1px 1px;
+    }
+
+    .ablog .ablogtxt
+    {
+        width: 500px;
+        height: 500px; 
+        padding: 0px 0px;
+    }
+
+    .ablog .ablogtxt h2
+    {
+        font-size: 1.6em;
+        padding: 10px 10px;
+        margin-top: 3px;
+       
+    }
+
+    .ablog .ablogtxt h4
+    {
+        font-size: 1.3em;
+        padding: 1px 1px;
+        margin: 50px;
+    }
+    .btn
+    {
+        padding: 5px 5px; 
+        margin: 50px; 
+    }
+
+    .sob
+    {
+        padding: 10px  5px;
+    }
+
+    .txtsob h2
+    {
+        font-size: 1em;
+        margin: 2px;
+        font-weight: 50;
+    }
+    .txtsob h2:before
+    {
+        bottom: -5px;
+        left: 44%;
+        width: 30px;
+        height: 3px;
+    
+    }
+    .cont2 p
+    {
+        margin: 1px;
+        padding: 4px; 
+        font-size: 1.5em;
+        font-weight: 300;
+        text-align:justify;
+    }
+
+    .sob .cont1
+    {
+        margin-top: 15px;
+        grid-gap: 15px;
+    }
+
+    .cont02 .confimg
+    {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .sob
+    {
+        padding: 0px 1px;
+    }
+    .post .t01
+    {
+        margin: 20px;
+    }
+    .post .t01 h2
+    {
+        font-size: 1em;
+    }
+   
+    .post .t01 h2:before
+    {
+        bottom: -5px;
+        left: 53%;
+        width: 30px;
+        height: 3px;
+    }
+
+    .post .q .postcolu
+    {
+        margin-top: 15px;
+    }
+    .post .q .postcolu .postli
+    {
+        height: 300px;  
+    }
+
+    .post .q .postcolu .postli.tam
+    {
+        height: 609px; 
+    }
+    .post .q .postcolu .postli .titu
+    {
+        padding: 1px;
+    }
+    .post .q .postcolu .postli .titu h2
+    {
+     color: #FF0000;
+     padding: 1px;  
+     font-size: 1.6em; 
+    }
+    .post .q .postcolu .postli .titu h3
+    {
+        font-size: 1em;
+        padding: 1px 1px;
+       
+    }
+    .post .q .postcolu .postli .titu .btn
+    {
+        padding: 1px 1px;
+        margin: 5px;
+    }
+    /*Roda pé*/
+
+    footer .footmenu li a
+    {
+        margin: 1px;
+    }
+    footer .roda
+    {
+        padding-top:1px;
+        font-size: 1em;
+    }
+}
+
+    
+/*tablet*/
+@media screen and (min-width:501px) and (max-width:800px)
+{
+    header
+    {
+        padding: 4px 5px;
+        width: 98%;
+    }
+    .header.pecorrer
+    {
+        padding: 1px 2px; 
+    }
+    .log
+    {
+        font-size: 1.7em;
+        margin-left: 10px;
+    }
+    .menu
+    {
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+        padding: 35px;
+    }
+    .menu.active
+    {
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+        padding: 35px;  
+    }
+    .navbar
+    {
+        background: url('img/barra/3.jpg');
+        background-size: 350%;
+        background-repeat: no-repeat;
+    }
+    .navbar li a
+    {
+        font-size: 1.7em;
+    }
+    /*Configuração da tela inicial*/
+    .ablog .ablogtxt
+    {
+        padding: 20px;   
+    }
+    .ablog .ablogtxt h2
+    {
+        font-size: 1.9em;
+    }
+    .ablog .ablogtxt h4
+    {
+        font-size: 1.6em;
+        padding: 20px;
+        font-weight: 100;
+    }
+    .btn
+    {
+        padding: 6px 10px;  
+        margin: 10px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    /*Configuração da tela sobre o blog*/
+    .sob
+    {
+        padding: 15px  10px;
+    }
+
+    .txtsob h2
+    {
+        font-size: 2em;
+        font-weight: 60;
+        margin: 2px;
+    }
+
+    .txtsob h2:before
+    {
+        bottom: -5px;
+        left: 60%;
+        width: 30px;
+        height: 3px;
+    }
+    .cont2 p
+    {
+        margin: 1px;
+        padding: 2px; 
+        font-size: 1.8em;
+        font-weight: 300;
+        text-align:justify;
+    }
+    
+    .cont02 .confimg
+    {
+        width: 100%;
+        height: 90%;
+    }
+    
+    /*Configuraão da postagem*/
+    .post 
+    {
+        padding: 25px;
+    }
+    .post .t01 h2
+    {
+        font-size: 2em;
+    }
+    .post .t01 h2:before
+    {
+        bottom: -5px;
+        left: 57%;
+        width: 30px;
+        height: 3px;
+    }
+    .post .q .postcolu
+    {
+        margin-top: 18px;
+    }
+    .post .q .postcolu .postli
+    {
+        height: 300px;  
+    }
+    .post .q .postcolu .postli.tam
+    {
+        height: 609px; 
+    }
+    .post .q .postcolu .postli .titu
+    {
+        padding: 8px;
+    }
+    .post .q .postcolu .postli .titu h2
+    {
+     color: #FF0000;
+     padding: 2px;  
+     font-size: 1.6em; 
+    }
+    .post .q .postcolu .postli .titu h3
+    {
+        font-size: 1em;
+        padding: 1px 1px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+}

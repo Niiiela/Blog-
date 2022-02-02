@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet&family=Fleur+De+Leah&family=Great+Vibes&family=Grey+Qo&family=Luxurious+Script&family=Mea+Culpa&family=Miss+Fajardose&family=Monsieur+La+Doulaise&family=Nosifer&family=Romanesco&family=Sail&family=Tangerine&display=swap');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background: url('img/perfil/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;   
+}
+
+#public
+{
+    text-align: center;
+    margin-top: 40px;   
+}
+
+.public1
+{
+    background-color: rgba(247, 240, 240, 0.5);
+    border: 3px solid rgb(247, 5, 5);
+    border-radius: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.public1 h3
+{ 
+    font-size: 50px;
+    text-align: center;
+    margin-top: 55px;
+    color: rgb(12, 3, 3);
+    font-family: 'Fleur De Leah', cursive;
+}
+
+.public2
+{
+    display:flex;
+    flex-direction: row-reverse; 
+}
+
+.public2 img
+{
+    width: 300px;
+    height: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 70px;
+    border-radius: 400px;
+    border: 10px;
+    border-style:double;
+    border-color: rgb(252, 7, 7); 
+}
+
+.public2 p
+{
+    padding: 20px;
+    font-size: 32px;
+    text-align: justify;
+    margin-top: 55px;
+    color: rgb(7, 1, 1);
+    font-family: 'Fleur De Leah', cursive;
+}
+
+
+.btn
+{
+    position: relative;
+    display: inline-block;
+    padding: 5px 2px;
+    margin: 10px;
+    color: red;
+    text-shadow: 1px 1px 1px rgb(214, 194, 194);
+    border: 1px outset rgba(247, 240, 240, 0.5);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: 0.25s;
+    font-family: 'Nosifer', cursive;
+}
+
+.btn:hover
+{
+    color: white;
+    background: rgb(241, 2, 2);
+}
+
+/*Responsivo*/
+@media screen and (min-width:0px) and (max-width:500px)
+{
+    body
+    {
+        background: url('img/perfil/1.jpg');
+        background-size: 490%;
+        background-repeat:no-repeat;
+    }
+    #public
+    {
+        margin-top: 25px; 
+    }
+    .public1
+    {
+        border-radius: 20px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .public1 h3
+    {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    .public2
+    {
+        display:block;
+    }
+    .public2 img
+    {
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+       
+    }
+    .public2 p
+    {
+        padding: 10px; 
+        font-size: 31px;
+        margin-top: 2px;
+    }
+    .btn
+    {
+        padding: 5px 1px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:800px)
+{
+    body
+    {
+        background: url('img/perfil/1.jpg');
+        background-size: 231%;
+        background-repeat:no-repeat;
+    }
+    #public
+    {
+        margin-top: 25px; 
+    }
+    .public1
+    {
+        border-radius: 20px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .public1 h3
+    {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    .public2
+    {
+        display:block;
+    }
+    .public2 img
+    {
+        width: 150px;
+        height: 150px;
+        margin-top: 30px;
+       
+    }
+    .public2 p
+    {
+        padding: 10px; 
+        font-size: 31px;
+        margin-top: 2px;
+    }
+    .btn
+    {
+        padding: 5px 1px;
+        font-size: 10px;
+    }
+}
