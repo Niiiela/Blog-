@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ballet&family=Fleur+De+Leah&family=Great+Vibes&family=Grey+Qo&family=Luxurious+Script&family=Mea+Culpa&family=Miss+Fajardose&family=Monsieur+La+Doulaise&family=Nosifer&family=Romanesco&family=Sail&family=Tangerine&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 /*Configurações gerais*/
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*scroll-behavior: */
 }
 
 /*Cores*/
@@ -36,15 +35,13 @@ header
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 1000;
-    /*border-bottom: 2px solid rgba(0,0,0, 0.5);*/
     transition: 0.5s;
 }
 
-/*Configuração da barra para pecorrer o texto
-header.pecorrer
+.cab
 {
-    padding: 20px 50px;
-}*/
+    padding: 1px 1px;  
+}
 
 .log
 {
@@ -57,8 +54,7 @@ header.pecorrer
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: 'Nosifer', cursive;
-    /*font-family: 'Fleur De Leah', cursive;*/
+    font-family:'Courier New', Courier, monospace;
 }
 
 /*Configuração do ícone do menu*/
@@ -93,7 +89,6 @@ header.pecorrer
     left: 0;
     width: 100%;
     height: 100vh;
-    /*imagem do menu floresta*/
     background: url('img/barra/3.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -116,7 +111,7 @@ header.pecorrer
 {
     list-style: none;
     margin: 1px 0;
-    font-family: 'Nosifer', cursive;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .navbar li
@@ -124,7 +119,6 @@ header.pecorrer
     list-style: none;
     margin: 10px 0;
 }
-
 
 .navbar li a
 {
@@ -184,7 +178,7 @@ section
     text-transform: uppercase;
     text-shadow: #CCC 1px 0 10px;
     color: rgb(146, 10, 10);
-    font-family: 'Nosifer', cursive;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .ablog .ablogtxt h4
@@ -197,7 +191,7 @@ section
     text-shadow: 5px 3px 2px black;
     text-transform: uppercase;
     padding: 30px;
-    font-family: 'Nosifer', cursive;
+    font-family:'Courier New', Courier, monospace;
 }
 .btn
 {
@@ -214,7 +208,7 @@ section
     letter-spacing: 2px;
     text-transform: uppercase;
     transform: 0.25s;
-    font-family: 'Nosifer', cursive;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .btn:hover
@@ -233,11 +227,10 @@ section
     flex-direction: column;
 }
 
-
 .txtsob h2
 {
     color: var(--black);
-    font-family: 'Nosifer', cursive;
+    font-family:'Courier New', Courier, monospace;
     font-size: 1.4em;
     font-weight: 500;
     text-transform: uppercase;
@@ -300,7 +293,7 @@ p
 .post .t01 h2
 {
     color: var(--black);
-    font-family: 'Nosifer', cursive;
+    font-family:'Courier New', Courier, monospace;
     font-size: 1.4em;
     text-align: center;
     font-weight: 500;
@@ -461,6 +454,8 @@ footer .roda
    text-align: center;
    letter-spacing: 1px; 
    padding: 1px;
+   font-size: 1.1em;
+   font-family:'Courier New', Courier, monospace;
    
 }
 
@@ -468,28 +463,41 @@ footer .roda
 /*Celular*/
 @media screen and (min-width:0px) and (max-width:500px)
 {
+    *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body
+    {
+        width: 100%;
+        margin: 0;
+    }
+
     header
     {
-      
-        padding: 1px 1px;        
+        padding: 1px 1px;      
     }
+
     .cab
     {
-        padding: 3px 3px;  
+        padding: 1px 1px; 
     }
 
     .log
     {
-        font-size: 1.1em; 
-        padding: 3px 15px;    
+        font-size: 1em; 
+        padding: 1px 1px;    
     }
+
 /*Configuração do menu*/
     .menu
     {
         width: 270px;
         height: 20px;
         background-size: 35px;
-        padding: 30px;
+        padding: 2rem 1rem;
     }
 
     .menu.active
@@ -497,14 +505,14 @@ footer .roda
         width: 270px;
         height: 20px;
         background-size: 35px;
-        padding: 30px;  
+        padding: 2rem 2rem;  
     }
 
     .navbar
     {
         padding: 1px 1px;
         background: url('img/barra/3.jpg');
-        background-size: 293%;
+        background-size: 393%;
         background-repeat: no-repeat;
     }
 
@@ -534,139 +542,207 @@ footer .roda
     {
         width: 500px;
         height: 500px; 
-        padding: 0px 0px;
+        padding: 1px 1px;
     }
 
     .ablog .ablogtxt h2
     {
-        font-size: 1.6em;
+        font-size: 1.9em;
         padding: 10px 10px;
-        margin-top: 3px;
-       
+        margin-top: 3px;  
     }
 
     .ablog .ablogtxt h4
     {
         font-size: 1.3em;
         padding: 1px 1px;
-        margin: 50px;
+        margin: 30px;
+        text-align: center;
+        letter-spacing: 0;
     }
+
     .btn
     {
         padding: 5px 5px; 
         margin: 50px; 
     }
-
-    .sob
-    {
-        padding: 10px  5px;
-    }
     
+    /*Sobre o site*/
+    .sob 
+    {
+        padding: 1px 1px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .sob 
     .txtsob
     {
         padding: 10px;
     }
 
-    .txtsob h2
+    .sob .txtsob h2
     {
-        font-size: 1em;
-        margin: 2px;
+        font-size: 1.5em;
+        margin: 1px;
+        padding: 0;
         font-weight: 50;
     }
-    .txtsob h2:before
+
+    .sob .txtsob h2:before
     {
         bottom: -5px;
-        left: 44%;
+        left: 48%;
         width: 30px;
         height: 3px;
-    
-    }
-    .cont2 p
-    {
-        margin: 1px;
-        padding: 4px; 
-        font-size: 1.5em;
-        font-weight: 300;
-        text-align:justify;
     }
 
     .sob .cont1
     {
-        margin-top: 15px;
-        grid-gap: 15px;
+        padding: 1px 1px;
+        width: 100%;
+        height: 1%;
+        display: block;
+    }
+
+    .sob .cont2
+    {
+        padding: 1px 1px;
+    }
+
+    .sob .cont2 p
+    {
+        font-size: 1.3em;
+        font-weight: 100;
+        text-align:justify;
+        padding: 0;
     }
 
     .cont02 .confimg
     {
-        width: 100%;
-        height: 100%;
+        margin: 1px;
+        width: 80%;
+        height: 90%;
+        margin-left: 10px;
+        margin-right: 10px;
+        align-items: center;
+        border-radius: 50px 50px 80px;
     }
     
-    .sob
+    /*Postagem*/
+    .post
     {
-        padding: 0px 1px;
+        width: 100%;
+        height: 100%;
+        height: auto;
+        margin: 1%;
     }
-    .post .t01
-    {
-        margin: 20px;
-    }
+
     .post .t01 h2
     {
-        font-size: 1em;
+        font-size: 1.3em;
+        padding: 1px 1px;
+        text-align: center;
+        letter-spacing: 0;
+        padding: 17px;
+        font-size: 1.5em;
+        color: #C0C0C0;
     }
-   
+
     .post .t01 h2:before
-    {
-        bottom: -5px;
-        left: 53%;
-        width: 30px;
-        height: 3px;
+    {   
+        width: 0px;
     }
 
     .post .q .postcolu
-    {
-        margin-top: 15px;
+    {  
+        margin-top: 6px;
+        width: 89px;
+        height: 110px;
+        margin-left: 1px;
     }
+
+    .post .q .postcolu .im .confimg
+    {
+        width: 95px;
+        height: 100px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+   
     .post .q .postcolu .postli
     {
-        height: 300px;  
+        background: red;
+        width: 100px;
+        height: 100px;
+        padding: 1px 1px;
+        margin-left: 10px;
+        margin-right: 70px; 
+        margin-bottom: 17px;
     }
 
     .post .q .postcolu .postli.tam
     {
-        height: 609px; 
+        
+        height: 215px;
+        width: 85px; 
     }
+    .post .q .postcolu .postli.tam .confimg
+    {
+        width: 89px;
+        height: 218px;
+    }
+    /****/
     .post .q .postcolu .postli .titu
     {
-        padding: 1px;
+       padding: 1px;
+       margin: 3px;
+        width: 100%;
+        height:100%;   
+        margin-left: 1px;
+        margin-right: 1px;
     }
+
     .post .q .postcolu .postli .titu h2
     {
-     color: #FF0000;
-     padding: 1px;  
-     font-size: 1.6em; 
+     
+        text-align: center;
+     padding: 7px 15px;  
+     font-size: 0.4em; 
     }
+
+    .post .q .postcolu .postli .titu h2 a
+    {
+        color: rgb(255, 5, 5);  
+    }
+
     .post .q .postcolu .postli .titu h3
     {
-        font-size: 1em;
-        padding: 1px 1px;
-       
+        font-size: 0.3em;
+        padding: 3px 10px;
+        width: 85px;
+        height: 80px;
     }
-    .post .q .postcolu .postli .titu .btn
-    {
-        padding: 1px 1px;
-        margin: 5px;
-    }
+
     /*Roda pé*/
 
+    footer
+    {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+    footer .log
+    {
+        color:#333;
+    }
     footer .footmenu li a
     {
-        margin: 1px;
+        margin: 6px;
     }
     footer .roda
     {
         padding-top:1px;
-        font-size: 1em;
+        font-size: 0.5em;
     }
 }
 
@@ -770,7 +846,8 @@ footer .roda
     .cont02 .confimg
     {
         width: 100%;
-        height: 90%;
+        height: 95%;
+        border-radius: 50px 50px 80px;
     }
     
     /*Configuraão da postagem*/
@@ -817,8 +894,16 @@ footer .roda
         padding: 1px 1px;
     }
     
+    .post .q .postcolu .postli .titu h2 a
+    {
+        color: rgb(255, 5, 5);  
+    }
     
-    
+    footer .roda
+    {
+        padding-top:1px;
+        font-size: 0.9em;
+    }
     
     
     
